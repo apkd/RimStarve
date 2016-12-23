@@ -10,9 +10,10 @@ This mod for [RimWorld](https://rimworldgame.com/) adds creatures found in the g
 [Don't Starve](https://www.kleientertainment.com/games/dont-starve) by Klei Entertainment.
 
 Features:
-  - Add this moment, 2 different animals
-  - High resolution graphics, additionally modified to better fit the Rimworld's graphical style
-  - Separate texture sets for eg. sheared beefalos and freezing rabbits
+- At this moment, 2 different animals (Beefalos and Rabbits) 
+- High resolution graphics, additionally modified to better fit the Rimworld's graphical style 
+- Separate contextual texture sets, e.g. for sheared beefalos and freezing rabbits as well as for sleeping animals 
+- Customized rabbit AI 
 
 Usage
 -----

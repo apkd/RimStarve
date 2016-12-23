@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="ResourceBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <statBases>
+      <Beauty>-7</Beauty>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase" Name="WoolBase" Abstract="True">
+    <graphicData>
+      <texPath>Things/Item/Resource/Wool</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <MarketValue>3.0</MarketValue>
+      <Mass>0.028</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>3.4</DeteriorationRate>
+    </statBases>
+    <stackLimit>100</stackLimit>
+    <stuffProps>
+      <categories>
+        <li>Fabric</li>
+      </categories>
+      <commonality>0.15</commonality>
+      <statFactors>
+        <ArmorRating_Electric>1.2</ArmorRating_Electric>
+      </statFactors>
+    </stuffProps>
+    <thingCategories>
+      <li>Textiles</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="WoolBase">
+    <defName>BeefaloWool</defName>
+    <label>beefalo wool</label>
+    <description>Soft, light and provides very good insulation. Wool clothes can keep the body warm even in extreme conditions.</description>
+    <graphicData>
+      <color>(159,172,166)</color>
+    </graphicData>
+    <stuffProps>
+      <color>(159,172,166)</color>
+      <commonality>0.15</commonality>
+      <statOffsets>
+        <ArmorRating_Heat>0.08</ArmorRating_Heat>
+        <ArmorRating_Electric>0.02</ArmorRating_Electric>
+      </statOffsets>
+      <statFactors>
+        <ArmorRating_Sharp>1.1</ArmorRating_Sharp>
+        <ArmorRating_Heat>2.2</ArmorRating_Heat>
+        <Insulation_Cold>3.0</Insulation_Cold>
+        <Insulation_Heat>3.0</Insulation_Heat>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+
+</Defs>

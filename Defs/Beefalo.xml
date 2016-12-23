@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<ThingDef ParentName="RimStarveThingBase">
+    <thingClass>RimStarvePawn</thingClass>
+		<defName>Beefalo</defName>
+    <label>beefalo</label>
+		<description>A large herding herbivore descended from buffalo and adapted for some exotic environment. Peaceful unless disturbed.</description>
+		<statBases>
+			<MoveSpeed>3.6</MoveSpeed>
+			<ComfyTemperatureMin>-60</ComfyTemperatureMin>
+			<MarketValue>600</MarketValue>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_MeleeAttack</verbClass>
+				<defaultCooldownTime>1.65</defaultCooldownTime>
+				<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+				<meleeDamageDef>Blunt</meleeDamageDef>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CompProperties_Milkable">
+				<milkDef>Milk</milkDef>
+				<milkIntervalDays>2</milkIntervalDays>
+				<milkAmount>6</milkAmount>
+			</li>
+			<li Class="CompProperties_Shearable">
+				<woolDef>BeefaloWool</woolDef>
+				<shearIntervalDays>30</shearIntervalDays>
+				<woolAmount>100</woolAmount>
+			</li>
+		</comps>
+		<race>
+			<wildBiomes>
+        <ExtremeDesert>0.2</ExtremeDesert>
+				<Desert>0.3</Desert>
+				<AridShrubland>1.0</AridShrubland>
+        <TemperateForest>0.3</TemperateForest>
+        <BorealForest>0.2</BorealForest>
+			</wildBiomes>
+			<herdAnimal>true</herdAnimal>
+			<body>Beefalo_QuadrupedAnimalWithHoovesAndTwoHorns</body>
+			<baseBodySize>2.0</baseBodySize>
+			<baseHealthScale>1.75</baseHealthScale>
+			<foodType>VegetarianRoughAnimal</foodType>
+			<leatherColor>(152,170,174)</leatherColor>
+			<leatherInsulation>0.8</leatherInsulation>
+			<gestationPeriodDays>30</gestationPeriodDays>
+			<wildness>0.6</wildness>
+			<nuzzleMtbHours>120</nuzzleMtbHours>
+			<packAnimal>true</packAnimal>
+			<lifeExpectancy>12</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.25</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>1.5</minAge>
+					<soundWounded>Pawn_Muffalo_Wounded</soundWounded>
+					<soundDeath>Pawn_Muffalo_Death</soundDeath>
+					<soundCall>Pawn_Muffalo_Call</soundCall>
+					<soundAngry>Pawn_Muffalo_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>StandardAnimal</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef Name="Beefalo" ParentName="RimStarveKindBase">
+		<defName>Beefalo</defName>
+		<label>beefalo</label>
+		<race>Beefalo</race>
+		<combatPower>100</combatPower>
+		<wildSpawn_spawnWild>true</wildSpawn_spawnWild>
+		<wildSpawn_EcoSystemWeight>1</wildSpawn_EcoSystemWeight>
+		<wildSpawn_GroupSizeRange>
+			<min>4</min>
+			<max>8</max>
+		</wildSpawn_GroupSizeRange>
+		<lifeStages>
+			<li>
+				<label>beefalo calf</label>
+				<labelPlural>beefalo calves</labelPlural>
+				<bodyGraphicData>
+					<texPath>Beefalo/beefalo_small</texPath>
+					<drawSize>1.75</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+					<drawSize>1.75</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Beefalo/beefalo_small</texPath>
+					<drawSize>2.5</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.45, 0.45)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+					<drawSize>2.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Beefalo/beefalo</texPath>
+					<drawSize>3.25</drawSize>
+					<shadowData>
+						<volume>(0.8, 0.6, 0.6)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
+					<drawSize>3.25</drawSize>
+				</dessicatedBodyGraphicData>
+        <dropBodyPart>
+          <bodyPartGroup>TuskAttackTool</bodyPartGroup>
+          <thing>BeefaloHorn</thing>
+          <allowFemale>false</allowFemale>
+        </dropBodyPart>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

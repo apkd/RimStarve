@@ -1,6 +1,6 @@
-![MeerkatMod](About/Preview.png)
+![RimStarve](About/Preview.png)
 
-Meerkat Mod
+RimStarve Mod
 ===========
 
 Introduction
@@ -18,7 +18,7 @@ Usage
 -----
 
 Simply clone this repository to your `steamapps/common/RimWorld/Mods` folder or
-add the mod from [Steam Workshop](http://steamcommunity.com/sharedfiles/filedetails/?id=812827396).
+add the mod from [Steam Workshop](http://steamcommunity.com/sharedfiles/filedetails/?id=824132570).
 
 
 Compatibility

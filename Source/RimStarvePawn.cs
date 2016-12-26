@@ -23,28 +23,50 @@ namespace Verse
             .FirstOrDefault(x => x.Name == "RimStarve")
             .GetContentHolder<Texture2D>();
 
-        private CompShearable compShearable;
+		private CompHasGatherableBodyResource compShearable;
+		private CompHasGatherableBodyResource compPower;
 
-        private bool IsSheared => compShearable?.Fullness < 0.1;
-        private bool IsFighting => CurJob?.def == JobDefOf.AttackMelee;
+		private bool IsSheared => compShearable?.Fullness < 0.1f;
+		private bool IsEnergized => compPower?.Fullness > 0.9f;
+		private bool IsFighting => CurJob?.def == JobDefOf.AttackMelee;
         private bool IsMoving => pather.MovingNow;
         private bool IsTamed => Faction == Faction.OfPlayer;
         private bool IsLyingDown => Downed || (jobs?.curDriver?.asleep ?? true) || !health.capacities.CanBeAwake;
         private bool IsCold => GenTemperature.GetTemperatureAtCellOrCaravanTile(this) <= 0;
-        private bool IsWinter => GenDate.Season(Find.TickManager.TicksAbs, Find.WorldGrid.LongLatOf(Find.VisibleMap.Tile).x) == Season.Winter;
-        private bool IsVolcanicWinter => Map.mapConditionManager.ConditionIsActive(MapConditionDefOf.VolcanicWinter);
+        private bool IsHot => GenTemperature.GetTemperatureAtCellOrCaravanTile(this) >= 42;
 
         private void SetupReplacements()
         {
-            // cache the CompShearable to avoid expensive calls every tick
-            compShearable = compShearable ?? GetComp<CompShearable>();
+			// cache the comps to avoid expensive calls every tick
+			compShearable = compShearable ?? GetComp<CompShearable>();
+			compPower = compPower ?? GetComp<CompStaticElectricity>();
 
-            // load replacements for existing graphics based on the current life stage
-            replacements.Clear();
+			// load replacements for existing graphics based on the current life stage
+			replacements.Clear();
+
+            AddReplacement(
+                graphic: LoadGraphic("summer_dead"),
+                condition: () => Dead && IsHot);
+
+            AddReplacement(
+                graphic: LoadGraphic("winter_dead"),
+                condition: () => Dead && IsCold);
+
+			AddReplacement(
+				graphic: LoadGraphic("dead"),
+				condition: () => Dead);
+
+			AddReplacement(
+                graphic: LoadGraphic("summer_sleep"),
+                condition: () => IsHot && IsLyingDown);
 
             AddReplacement(
                 graphic: LoadGraphic("winter_sleep"),
                 condition: () => IsCold && IsLyingDown);
+
+            AddReplacement(
+                graphic: LoadGraphic("summer"),
+                condition: () => IsHot);
 
             AddReplacement(
                 graphic: LoadGraphic("winter"),
@@ -58,7 +80,11 @@ namespace Verse
                 graphic: LoadGraphic("sheared"),
                 condition: () => IsTamed && IsSheared);
 
-            AddReplacement(
+			AddReplacement(
+				graphic: LoadGraphic("charged"),
+				condition: () => IsEnergized);
+
+			AddReplacement(
                 graphic: LoadGraphic("sleep"),
                 condition: () => IsLyingDown);
 
@@ -107,11 +133,12 @@ namespace Verse
         }
 
         /// <summary> Executed every time the pawn is updated </summary>
-        public override void Tick()
+        public override void TickRare()
         {
-            base.Tick();
+            base.TickRare();
 
             if (pather == null) return; // this can occur if the pawn leaves the map area
+            if (ageTracker == null) return;
 
             // initialize the replacements (once per lifestage)
             if (lifeStageBefore != ageTracker.CurKindLifeStage)

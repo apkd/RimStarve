@@ -11,8 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Defs", "Defs", "{E119735E-E
 		Defs\BeefaloBody.xml = Defs\BeefaloBody.xml
 		Defs\BeefaloHorn.xml = Defs\BeefaloHorn.xml
 		Defs\BeefaloWool.xml = Defs\BeefaloWool.xml
+		Defs\Hound.xml = Defs\Hound.xml
+		Defs\HoundBody.xml = Defs\HoundBody.xml
+		Defs\HoundTooth.xml = Defs\HoundTooth.xml
+		Defs\Incident.xml = Defs\Incident.xml
 		Defs\Rabbit.xml = Defs\Rabbit.xml
 		Defs\RimStarveBase.xml = Defs\RimStarveBase.xml
+		Defs\VoltGoat.xml = Defs\VoltGoat.xml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "About", "About", "{0D8D379E-EB3B-464E-9E0E-44962D7AC040}"

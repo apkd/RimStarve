@@ -1,24 +1,25 @@
-![MeerkatMod](About/Preview.png)
+![RimStarve](About/Preview.png)
 
-Meerkat Mod
+RimStarve Mod
 ===========
 
 Introduction
 ------------
 
-This mod for [RimWorld](https://rimworldgame.com/) adds creatures found in the game
+This work-in-progress mod for [RimWorld](https://rimworldgame.com/) adds creatures found in
 [Don't Starve](https://www.kleientertainment.com/games/dont-starve) by Klei Entertainment.
 
 Features:
-  - Add this moment, 2 different animals
+  - At this moment, 4 different animals (Beefalos, Rabbits, Hounds and Volt Goats)
   - High resolution graphics, additionally modified to better fit the Rimworld's graphical style
-  - Separate texture sets for eg. sheared beefalos and freezing rabbits
+  - Separate contextual texture sets, e.g. for sheared beefalos and freezing rabbits as well as for sleeping animals
+  - Customized rabbit AI
 
 Usage
 -----
 
 Simply clone this repository to your `steamapps/common/RimWorld/Mods` folder or
-add the mod from [Steam Workshop](http://steamcommunity.com/sharedfiles/filedetails/?id=812827396).
+add the mod from [Steam Workshop](http://steamcommunity.com/sharedfiles/filedetails/?id=824132570).
 
 
 Compatibility

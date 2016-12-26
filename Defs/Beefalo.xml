@@ -12,20 +12,30 @@
 			<MarketValue>600</MarketValue>
 		</statBases>
 		<verbs>
-			<li>
-				<verbClass>Verb_MeleeAttack</verbClass>
-				<defaultCooldownTime>1.65</defaultCooldownTime>
-				<meleeDamageBaseAmount>10</meleeDamageBaseAmount>
-				<meleeDamageDef>Blunt</meleeDamageDef>
-				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-			</li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>1.65</defaultCooldownTime>
+        <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTime>2.10</defaultCooldownTime>
+        <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <linkedBodyPartsGroup>BeefaloHornsAttackTool</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
 		</verbs>
 		<comps>
-			<li Class="CompProperties_Milkable">
-				<milkDef>Milk</milkDef>
-				<milkIntervalDays>2</milkIntervalDays>
-				<milkAmount>6</milkAmount>
-			</li>
 			<li Class="CompProperties_Shearable">
 				<woolDef>BeefaloWool</woolDef>
 				<shearIntervalDays>30</shearIntervalDays>
@@ -33,12 +43,13 @@
 			</li>
 		</comps>
 		<race>
+      <deathActionWorkerClass>DeathActionWorker_DropBodyParts</deathActionWorkerClass>
 			<wildBiomes>
         <ExtremeDesert>0.2</ExtremeDesert>
 				<Desert>0.3</Desert>
 				<AridShrubland>1.0</AridShrubland>
-        <TemperateForest>0.3</TemperateForest>
-        <BorealForest>0.2</BorealForest>
+        <TemperateForest>0.4</TemperateForest>
+        <BorealForest>0.4</BorealForest>
 			</wildBiomes>
 			<herdAnimal>true</herdAnimal>
 			<body>Beefalo_QuadrupedAnimalWithHoovesAndTwoHorns</body>
@@ -135,9 +146,9 @@
 					<drawSize>3.25</drawSize>
 				</dessicatedBodyGraphicData>
         <dropBodyPart>
-          <bodyPartGroup>TuskAttackTool</bodyPartGroup>
+          <bodyPartGroup>BeefaloHornsAttackTool</bodyPartGroup>
           <thing>BeefaloHorn</thing>
-          <allowFemale>false</allowFemale>
+          <allowFemale>true</allowFemale>
         </dropBodyPart>
 			</li>
 		</lifeStages>

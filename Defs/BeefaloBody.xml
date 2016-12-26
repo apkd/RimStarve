@@ -1,6 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <BodyDefs>
 
+  <BodyPartGroupDef>
+    <defName>BeefaloHornsAttackTool</defName>
+    <label>horns</label>
+  </BodyPartGroupDef>
+  
   <BodyPartDef>
     <defName>Beefalo_LeftHorn</defName>
     <label>left horn</label>
@@ -73,12 +78,12 @@
         </li>
         <li>
           <def>Neck</def>
-          <coverage>0.08</coverage>
+          <coverage>0.2</coverage>
           <height>Top</height>
           <parts>
             <li>
               <def>Head</def>
-              <coverage>0.75</coverage>
+              <coverage>0.9</coverage>
               <groups>
                 <li>HeadAttackTool</li>
               </groups>
@@ -97,11 +102,11 @@
                 </li>
                 <li>
                   <def>LeftEye</def>
-                  <coverage>0.15</coverage>
+                  <coverage>0.1</coverage>
                 </li>
                 <li>
                   <def>RightEye</def>
-                  <coverage>0.15</coverage>
+                  <coverage>0.1</coverage>
                 </li>
                 <li>
                   <def>LeftEar</def>
@@ -113,7 +118,7 @@
                 </li>
                 <li>
                   <def>Nose</def>
-                  <coverage>0.3</coverage>
+                  <coverage>0.2</coverage>
                 </li>
                 <li>
                   <def>Jaw</def>
@@ -126,14 +131,14 @@
                   <def>Beefalo_LeftHorn</def>
                   <coverage>0.1</coverage>
                   <groups>
-                    <li>HornAttackTool</li>
+                    <li>BeefaloHornsAttackTool</li>
                   </groups>
                 </li>
                 <li>
                   <def>Beefalo_RightHorn</def>
                   <coverage>0.1</coverage>
                   <groups>
-                    <li>HornAttackTool</li>
+                    <li>BeefaloHornsAttackTool</li>
                   </groups>
                 </li>
               </parts>

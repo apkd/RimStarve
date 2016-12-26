@@ -14,14 +14,14 @@
   <ThingDef ParentName="ResourceVerbBase">
     <defName>BeefaloHorn</defName>
     <label>beefalo horn</label>
-    <description>A beefalo's horn. Very valuable. It can be used as an improvised weapon..</description>
+    <description>A beefalo's horn. A valuable trophy. It can be used as an improvised weapon.</description>
     <graphicData>
       <texPath>Things/Item/Special/ElephantTusk</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <equippedAngleOffset>-20</equippedAngleOffset>
     <statBases>
-      <MarketValue>72</MarketValue>
+      <MarketValue>48</MarketValue>
       <MaxHitPoints>150</MaxHitPoints>
       <Mass>1.8</Mass>
       <Flammability>1.0</Flammability>

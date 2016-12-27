@@ -36,7 +36,7 @@ namespace RimWorld
         {
             base.CompTick();
 
-            if (parent.DestroyedOrNull()) return;
+            if (parent.DestroyedOrNull() || !parent.Spawned || (parent as Pawn).Dead) return;
             if ((GenTicks.TicksAbs + frameskip_offset) % frameskip != 0) return;
             if (fullness == 0) return;
 

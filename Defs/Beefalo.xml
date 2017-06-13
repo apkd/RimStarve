@@ -43,7 +43,6 @@
 			</li>
 		</comps>
 		<race>
-      <deathActionWorkerClass>DeathActionWorker_DropBodyParts</deathActionWorkerClass>
 			<wildBiomes>
         <ExtremeDesert>0.2</ExtremeDesert>
 				<Desert>0.3</Desert>
@@ -145,11 +144,11 @@
 					<texPath>Things/Pawn/Animal/Muffalo/MuffaloDessicated</texPath>
 					<drawSize>3.25</drawSize>
 				</dessicatedBodyGraphicData>
-        <dropBodyPart>
+				<butcherBodyPart>
           <bodyPartGroup>BeefaloHornsAttackTool</bodyPartGroup>
           <thing>BeefaloHorn</thing>
           <allowFemale>true</allowFemale>
-        </dropBodyPart>
+        </butcherBodyPart>
 			</li>
 		</lifeStages>
 	</PawnKindDef>

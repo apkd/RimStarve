@@ -59,7 +59,6 @@
       </li>
     </verbs>
     <race>
-      <deathActionWorkerClass>DeathActionWorker_DropBodyParts</deathActionWorkerClass>
       <body>Hound_QuadrupedAnimalWithPawsTailAndFangs</body>
       <predator>true</predator>
       <petness>0.5</petness>
@@ -163,11 +162,11 @@
           <texPath>Hound/hound</texPath>
           <drawSize>1.7</drawSize>
         </dessicatedBodyGraphicData>
-        <dropBodyPart>
+				<butcherBodyPart>
           <bodyPartGroup>HoundFangsAttackTool</bodyPartGroup>
           <thing>HoundTooth</thing>
           <allowFemale>true</allowFemale>
-        </dropBodyPart>
+        </butcherBodyPart>
       </li>
     </lifeStages>
     <wildSpawn_spawnWild>true</wildSpawn_spawnWild>

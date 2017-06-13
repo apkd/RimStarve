@@ -24,13 +24,13 @@ namespace RimWorld
         protected override bool Active => (parent as Pawn)?.Awake() ?? false;
         public CompProperties_CompStaticElectricity Props => props as CompProperties_CompStaticElectricity;
 
-        private WeatherDef[] weathers = {
+        WeatherDef[] weathers = {
             WeatherDef.Named("Rain"), WeatherDef.Named("FoggyRain"),
             WeatherDef.Named("RainyThunderstorm"), WeatherDef.Named("DryThunderstorm"),
         };
 
-        private const int frameskip = 150;
-        private int frameskip_offset = Rand.Range(0, frameskip);
+        const int frameskip = 150;
+        int frameskip_offset = Rand.Range(0, frameskip);
 
         public override void CompTick()
         {
@@ -66,7 +66,7 @@ namespace RimWorld
             }
         }
 
-        private string ElectricityString()
+        string ElectricityString()
         {
             if (!Active) return null;
             if (fullness > 0.9) return "Full charge";

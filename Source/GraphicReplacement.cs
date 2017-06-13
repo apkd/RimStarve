@@ -5,8 +5,8 @@ namespace Verse
 	/// <summary> Used to replace the pawn's graphic if a condition is met. </summary>
 	public class GraphicReplacement
 	{
-		private Graphic replacement;
-		private Func<bool> condition;
+		Graphic replacement;
+		Func<bool> condition;
 
 		public GraphicReplacement(Graphic replacement, Func<bool> condition)
 		{

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RimStarve", "Source\RimStarve.csproj", "{141D4447-F869-4A03-960E-4EBC1FCB4A0C}"
 EndProject
@@ -9,12 +9,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Defs", "Defs", "{E119735E-E
 	ProjectSection(SolutionItems) = preProject
 		Defs\Beefalo.xml = Defs\Beefalo.xml
 		Defs\BeefaloBody.xml = Defs\BeefaloBody.xml
+		Defs\BeefaloBodyParts.xml = Defs\BeefaloBodyParts.xml
 		Defs\BeefaloHorn.xml = Defs\BeefaloHorn.xml
 		Defs\BeefaloWool.xml = Defs\BeefaloWool.xml
 		Defs\Hound.xml = Defs\Hound.xml
 		Defs\HoundBody.xml = Defs\HoundBody.xml
 		Defs\HoundTooth.xml = Defs\HoundTooth.xml
-		Defs\Incident.xml = Defs\Incident.xml
 		Defs\Rabbit.xml = Defs\Rabbit.xml
 		Defs\RimStarveBase.xml = Defs\RimStarveBase.xml
 		Defs\VoltGoat.xml = Defs\VoltGoat.xml
